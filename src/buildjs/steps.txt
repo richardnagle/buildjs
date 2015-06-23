@@ -1,0 +1,37 @@
+﻿1. Started new empty asp.net5 project
+2. npm install -g jspm (from dir above wwwroot)
+3. jspm init - follow defaults except
+	a) BaseURL = ./wwwroot
+	b) ES6 transpiler = babel
+4. add following to project.json in dependencies
+	"Microsoft.AspNet.StaticFiles": "1.0.0-beta4"
+5. edit startup.cs
+	using Microsoft.AspNet.StaticFiles;
+	
+	public void Configure(IApplicationBuilder app)
+    {
+        app.UseFileServer(new FileServerOptions
+        {
+             EnableDefaultFiles = true,
+             EnableDirectoryBrowsing = true,                   
+        });            
+    }
+6. build
+7. jspm registry config github
+8. copy contents from aurelia-skeleton.zip to folder above wwwroot (overwrite package.json)
+9. edit package.json, add following to the "jspm" object
+	  "jspm": {
+		"directories": {
+			"baseURL": "wwwroot"
+    },
+10. npm install (in folder above wwwroot)
+11. jspm intall -y (same folder)
+12. had to do jspm registry config github again
+13. edit build/paths.js - change outputRoot to 'wwwroot/dist/'
+14. create a dist folder underneath wwwroot
+15. copy file build/watch.js as build/watch-vs.js
+16. edit build/watch-vs.js and change the task definition as follows:
+		 - change name of task to watch-vs
+		 - change dependency from 'serve' to 'build'
+		 i.e. gulp.task('watch-vs', ['build'], function() {
+17. right-click gulpfile.js and select Task Runner Explorer. bind the watch-vs task to project start 

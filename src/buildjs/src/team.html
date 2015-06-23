@@ -1,0 +1,14 @@
+<template>
+  <require from="./hex-colour-value-converter"></require>
+  <style>
+      .teamColour {
+          color: ${team.ForegroundColour | hexColour}; 
+          background-color: ${team.BackgroundColour | hexColour};
+      }
+  </style>  
+  <div class="teamColour">
+    <h3>${team.Name} Home Page</h3>
+    <div>${team.ForegroundColour} : ${team.ForegroundColour | hexColour}</div>
+    <div>${team.BackgroundColour} : ${team.BackgroundColour | hexColour}</div>
+  </div>
+</template>
