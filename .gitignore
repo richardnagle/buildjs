@@ -16,6 +16,10 @@ bld/
 [Bb]in/
 [Oo]bj/
 
+#IGNORE .VS FOLDER
+.vs/
+
+
 # Roslyn cache directories
 *.ide/
 
@@ -139,6 +143,9 @@ packages/*
 # This line needs to be after the ignore of the build folder
 # (and the packages folder if the line above has been uncommented)
 !packages/build/
+
+# addedto include aurelia build folder
+!/src/buildjs/build/
 
 # Windows Azure Build Output
 csx/
