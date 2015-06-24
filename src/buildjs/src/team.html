@@ -1,14 +1,56 @@
 <template>
   <require from="./hex-colour-value-converter"></require>
   <style>
-      .teamColour {
-          color: ${team.ForegroundColour | hexColour}; 
-          background-color: ${team.BackgroundColour | hexColour};
+      .teamText {
+          padding-bottom:4px; 
+          padding-left:30px; 
+          vertical-align:middle
       }
+ 
+
+      .team-border-outer{
+          border: 3px solid;
+          border-radius: 15px;
+          padding: 3px;
+          color: ${team.ForegroundColour | hexColour};
+          background-color: ${team.ForegroundColour | hexColour};                     
+      }
+
+     .team-border-middle{
+          border: 6px solid;
+          border-radius: 15px;
+          padding: 3px;
+          color: ${team.BackgroundColour | hexColour};
+          background-color: ${team.ForegroundColour | hexColour};                     
+      }
+
+      .team-border-inner{
+          border: 2px solid;
+          border-radius: 15px;
+          padding: 3px;
+          color: ${team.ForegroundColour | hexColour};
+          background-color: ${team.BackgroundColour | hexColour};                     
+      }
+
+      body {
+          background-color: #F1F1F0;
+      }
+
   </style>  
-  <div class="teamColour">
-    <h3>${team.Name} Home Page</h3>
-    <div>${team.ForegroundColour} : ${team.ForegroundColour | hexColour}</div>
-    <div>${team.BackgroundColour} : ${team.BackgroundColour | hexColour}</div>
+
+
+  <div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+        <div class= "team-border-outer">
+            <div class="team-border-middle">
+                <div class="team-border-inner">
+                    <h1 class="teamText">${team.Name}</h1>
+                    <h4 class="teamText">Sub-title appears here</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-1"></div>
   </div>
 </template>
