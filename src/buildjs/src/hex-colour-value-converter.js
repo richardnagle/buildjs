@@ -12,7 +12,8 @@
     fromView(rgbHexString)
     {
         if(rgbHexString) {
-            return Number.parseInt(rgbHexString, 16);
+            var hex = rgbHexString.substring(1);
+            return Number.parseInt(hex, 16);
         }
 
         return null;

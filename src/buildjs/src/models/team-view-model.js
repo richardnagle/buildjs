@@ -1,11 +1,4 @@
 ﻿export class TeamViewModel{
-
-    Id: Number;
-    Name: String;
-    ForegroundColour: Number;
-    BackgroundColour: Number;
-    IsVisible: Boolean;
-
     constructor(teamJson)
     {
         if (teamJson) {
