@@ -4,25 +4,22 @@ export class HexColourValueConverter
 {
     toView(rgbInt)
     {
-        if(rgbInt) {
-            console.info('toValue:rgbInt='+rgbInt);
-            var hex=rgbInt.toString(16);
-            hex = S(hex).padLeft(6,'0');
-            var result='#'+hex;
-            console.info('toValue:result='+result);
-            return result;        
+        if(rgbInt == null){
+            return null;
         }
-
-        return null;
+        
+        var hex=rgbInt.toString(16);
+        hex = S(hex).padLeft(6,'0');
+        return '#'+hex;        
     }
 
     fromView(rgbHexString)
     {
-        if(rgbHexString) {
-            var hex = rgbHexString.substring(1);
-            return Number.parseInt(hex, 16);
+        if(rgbHexString == null) {
+            return null;
         }
 
-        return null;
+        var hex = rgbHexString.substring(1);
+        return Number.parseInt(hex, 16);
     }
 }
