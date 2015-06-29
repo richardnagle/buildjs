@@ -1,8 +1,8 @@
-﻿export class Spike {
+﻿import S from 'stringjs';
 
-    constructor(http,router){
-        this.http = http;
-        this.router = router;
+export class Spike {
+
+    constructor(){
         this.colour = '#ffffff';
     }
 
