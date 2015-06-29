@@ -10,7 +10,7 @@ export class Team {
     
   constructor(httpClient) {
     this.httpClient = httpClient;
-    
+    this.team = new TeamViewModel({"ForegroundColour": 1, "BackgroundColour": 1})       
   }
   
   activate(params) {

@@ -1,0 +1,46 @@
+﻿<template>
+    <require from="./hex-colour-value-converter"></require>
+    <section>
+        <form role="form" submit.delegate="save()">
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="form-group">
+                        <label for="fgc">Foreground Colour</label>
+                        <input type="color" value.bind="colour" class="form-control" id="fgc" placeholder="foreground colour">
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="form-group">
+                        <label for="colr">Colour</label>
+                        <p id="colr">${colour}</p>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="form-group">
+                        <label for="hex">Hex</label>
+                        <p id="hex">${hexOnly}</p>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="form-group">
+                        <label for="intv">Int Value</label>
+                        <p id="intv">${intValue}</p>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="form-group">
+                        <label for="intv">Back to Hex</label>
+                        <p id="intv">${backToHex}</p>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="form-group">
+                        <label for="convto">To Hex with converter</label>
+                        <p id="convto">${intValue | hexColour}</p>
+                    </div>
+                </div>
+          </div>
+            <!--<button type="submit" class="btn btn-default">Save</button>-->
+        </form>
+    </section>
+</template>

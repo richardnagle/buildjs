@@ -12,7 +12,8 @@ export class App {
     config.map([
       { route: '', moduleId: './welcome', nav: true, title: 'Home', name: 'home'},
       { route: 'team/:id',  moduleId: './team', name: 'team', nav: false },
-      { route: 'new-team', moduleId: './edit-team', nav: true, title: 'New Team'}
+      { route: 'new-team', moduleId: './edit-team', nav: true, title: 'New Team'},
+      { route: 'spike', moduleId: './spike', nav: true, title: 'Spike'}
     ]);
   }
 }
