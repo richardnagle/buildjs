@@ -3,18 +3,18 @@
     {
         if (teamJson) {
             
-            this.Id = teamJson.Id;
-            this.Name = teamJson.Name;
-            this.SubTitle = teamJson.SubTitle;
-            this.ForegroundColour = teamJson.ForegroundColour;
-            this.BackgroundColour = teamJson.BackgroundColour;
-            this.IsVisible = teamJson.IsVisible;
+            this.id = teamJson.Id;
+            this.name = teamJson.Name;
+            this.subTitle = teamJson.SubTitle;
+            this.foregroundColour = teamJson.ForegroundColour;
+            this.backgroundColour = teamJson.BackgroundColour;
+            this.isVisible = teamJson.IsVisible;
         }
     }
 
-    SwapColours(){
-        var tmp = this.BackgroundColour;
-        this.BackgroundColour = this.ForegroundColour;
-        this.ForegroundColour = tmp;
+    swapColours(){
+        var tmp = this.backgroundColour;
+        this.backgroundColour = this.foregroundColour;
+        this.foregroundColour = tmp;
     }
 }

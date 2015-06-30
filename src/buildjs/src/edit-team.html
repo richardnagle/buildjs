@@ -7,7 +7,7 @@
                 <div class="col-lg-6 form-group">
                     <div class="form-group">
                         <label for="fn">Team Name</label>
-                        <input type="text" value.bind="Team.Name" class="form-control" id="fn" placeholder="team name">
+                        <input type="text" value.bind="team.name" class="form-control" id="fn" placeholder="team name">
                     </div>
                 </div>
             </div>
@@ -15,7 +15,7 @@
                 <div class="col-lg-6 form-group">
                     <div class="form-group">
                         <label for="sub">Sub-Title</label>
-                        <input type="text" value.bind="Team.SubTitle" class="form-control" id="sub" placeholder="sub-title">
+                        <input type="text" value.bind="team.subTitle" class="form-control" id="sub" placeholder="sub-title">
                     </div>
                 </div>
             </div>
@@ -23,25 +23,25 @@
                 <div class="col-lg-1">
                     <div class="form-group">
                         <label for="fgc">Foreground</label>
-                        <input type="color" value.bind="Team.ForegroundColour | hexColour" class="form-control" id="fgc" placeholder="foreground colour">
+                        <input type="color" value.bind="team.foregroundColour | hexColour" class="form-control" id="fgc" placeholder="foreground colour">
                     </div>
                 </div>
                 <div class="col-lg-1">
                     <div class="form-group">
                         <label for="bgc">Background</label>
-                        <input type="color" value.bind="Team.BackgroundColour | hexColour" class="form-control" id="bgc" placeholder="background colour">
+                        <input type="color" value.bind="team.backgroundColour | hexColour" class="form-control" id="bgc" placeholder="background colour">
                     </div>
                 </div>
                 <div class="col-lg-1">
                     <div class="form-group">
                         <label for="swp">&nbsp;</label>
-                        <button click.delegate="Team.SwapColours()" class="form-control" id="swp">Swap</button>
+                        <button click.delegate="team.swapColours()" class="btn btn-info form-control" id="swp">Swap</button>
                     </div>
                 </div>
                 <div class="col-lg-9">
                     <div class="form-group">
                         <label for="pvw">Preview</label>
-                        <team-banner team.bind="Team" id="pvw"></team-banner>
+                        <team-banner team.bind="team" id="pvw"></team-banner>
                     </div>
                 </div>
             </div>

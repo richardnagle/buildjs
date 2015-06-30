@@ -12,32 +12,32 @@
           border: 3px solid;
           border-radius: 15px;
           padding: 3px;
-          color: ${team.ForegroundColour | hexColour};
-          background-color: ${team.ForegroundColour | hexColour};                     
+          color: ${team.foregroundColour | hexColour};
+          background-color: ${team.foregroundColour | hexColour};                     
       }
 
      .team-border-middle{
           border: 6px solid;
           border-radius: 15px;
           padding: 3px;
-          color: ${team.BackgroundColour | hexColour};
-          background-color: ${team.ForegroundColour | hexColour};                     
+          color: ${team.backgroundColour | hexColour};
+          background-color: ${team.foregroundColour | hexColour};                     
       }
 
       .team-border-inner{
           border: 2px solid;
           border-radius: 15px;
           padding: 3px;
-          color: ${team.ForegroundColour | hexColour};
-          background-color: ${team.BackgroundColour | hexColour};                     
+          color: ${team.foregroundColour | hexColour};
+          background-color: ${team.backgroundColour | hexColour};                     
       }
   </style>
     
     <div class="team-border-outer">
         <div class="team-border-middle">
             <div class="team-border-inner">
-                <h1 class="teamText">${team.Name}</h1>
-                <h4 class="teamText">${team.SubTitle}</h4>
+                <h1 class="teamText">${team.name}</h1>
+                <h4 class="teamText">${team.subTitle}</h4>
             </div>
         </div>
     </div>

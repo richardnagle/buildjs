@@ -7,13 +7,13 @@ import {Router} from 'aurelia-router';
 export class EditTeam {
 
     constructor(http,router){
-        this.Team = new TeamViewModel();
+        this.team = new TeamViewModel();
         this.http = http;
         this.router = router;
     }
 
     save(){
-        this.http.post('./team', this.Team)
+        this.http.post('./team', this.team)
         .then(response => this.router.navigate('/'));
     }
 }
