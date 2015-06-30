@@ -1,5 +1,6 @@
 ﻿<template>
     <require from="./hex-colour-value-converter"></require>
+    <require from="./team-banner"></require>
     <section>
         <form role="form" submit.delegate="save()">
             <div class="row">
@@ -29,6 +30,12 @@
                     <div class="form-group">
                         <label for="bgc">Background Colour</label>
                         <input type="color" value.bind="Team.BackgroundColour | hexColour" class="form-control" id="bgc" placeholder="background colour">
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="form-group">
+                        <label for="pvw">Preview</label>
+                        <team-banner team.bind="Team" id="pvw"></team-banner>
                     </div>
                 </div>
             </div>
