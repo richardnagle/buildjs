@@ -1,36 +1,6 @@
 <template>
-  <require from="./hex-colour-value-converter"></require>
+  <require from="./team-banner"></require>
   <style>
-      .teamText {
-          padding-bottom:4px; 
-          padding-left:30px; 
-          vertical-align:middle
-      }
- 
-
-      .team-border-outer{
-          border: 3px solid;
-          border-radius: 15px;
-          padding: 3px;
-          color: ${team.ForegroundColour | hexColour};
-          background-color: ${team.ForegroundColour | hexColour};                     
-      }
-
-     .team-border-middle{
-          border: 6px solid;
-          border-radius: 15px;
-          padding: 3px;
-          color: ${team.BackgroundColour | hexColour};
-          background-color: ${team.ForegroundColour | hexColour};                     
-      }
-
-      .team-border-inner{
-          border: 2px solid;
-          border-radius: 15px;
-          padding: 3px;
-          color: ${team.ForegroundColour | hexColour};
-          background-color: ${team.BackgroundColour | hexColour};                     
-      }
 
       body {
           background-color: #F1F1F0;
@@ -39,25 +9,10 @@
       p {
           text-align: justify;
       }
-
-
   </style>  
 
+  <team-banner team.bind="team"></team-banner>
 
-  <div class="row">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-10">
-        <div class= "team-border-outer">
-            <div class="team-border-middle">
-                <div class="team-border-inner">
-                    <h1 class="teamText">${team.Name}</h1>
-                    <h4 class="teamText">${team.SubTitle}</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-1"></div>
-  </div>
   <div class="row">
       <div class="col-lg-1"></div>
       <div class="col-lg-4">
