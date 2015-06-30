@@ -22,17 +22,23 @@
             <div class="row">
                 <div class="col-lg-1">
                     <div class="form-group">
-                        <label for="fgc">Foreground Colour</label>
+                        <label for="fgc">Foreground</label>
                         <input type="color" value.bind="Team.ForegroundColour | hexColour" class="form-control" id="fgc" placeholder="foreground colour">
                     </div>
                 </div>
                 <div class="col-lg-1">
                     <div class="form-group">
-                        <label for="bgc">Background Colour</label>
+                        <label for="bgc">Background</label>
                         <input type="color" value.bind="Team.BackgroundColour | hexColour" class="form-control" id="bgc" placeholder="background colour">
                     </div>
                 </div>
-                <div class="col-lg-10">
+                <div class="col-lg-1">
+                    <div class="form-group">
+                        <label for="swp">&nbsp;</label>
+                        <button click.delegate="Team.SwapColours()" class="form-control" id="swp">Swap</button>
+                    </div>
+                </div>
+                <div class="col-lg-9">
                     <div class="form-group">
                         <label for="pvw">Preview</label>
                         <team-banner team.bind="Team" id="pvw"></team-banner>

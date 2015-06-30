@@ -11,4 +11,10 @@
             this.IsVisible = teamJson.IsVisible;
         }
     }
+
+    SwapColours(){
+        var tmp = this.BackgroundColour;
+        this.BackgroundColour = this.ForegroundColour;
+        this.ForegroundColour = tmp;
+    }
 }
