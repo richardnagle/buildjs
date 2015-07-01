@@ -99,6 +99,8 @@ section.au-enter-active {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0)
   }
+
+
   40%,
   43% {
     -webkit-transition-timing-function: cubic-bezier(0.755, .050, .855, .060);
@@ -145,4 +147,10 @@ section.au-enter-active {
     -ms-transform: translate3d(0, -4px, 0);
     transform: translate3d(0, -4px, 0)
   }
+}
+
+/* styles not from aurelia-bootstrapper start here */
+
+.icon-button {
+    cursor:pointer;
 }

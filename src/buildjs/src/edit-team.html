@@ -20,23 +20,30 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-1">
-                    <div class="form-group">
-                        <label for="fgc">Foreground</label>
-                        <input type="color" value.bind="team.foregroundColour | hexColour" class="form-control" id="fgc" placeholder="foreground colour">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="form-group">
+                                <label for="fgc">Foreground</label>
+                                <input type="color" value.bind="team.foregroundColour | hexColour" class="form-control" id="fgc" placeholder="foreground colour">
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <label for="swp">&nbsp;</label>
+                                    <span class="glyphicon glyphicon-transfer icon-button" click.delegate="team.swapColours()" id="swp"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="form-group">
+                                <label for="bgc">Background</label>
+                                <input type="color" value.bind="team.backgroundColour | hexColour" class="form-control" id="bgc" placeholder="background colour">
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
                     </div>
                 </div>
                 <div class="col-lg-1">
-                    <div class="form-group">
-                        <label for="bgc">Background</label>
-                        <input type="color" value.bind="team.backgroundColour | hexColour" class="form-control" id="bgc" placeholder="background colour">
-                    </div>
-                </div>
-                <div class="col-lg-1">
-                    <div class="form-group">
-                        <label for="swp">&nbsp;</label>
-                        <button click.delegate="team.swapColours()" class="btn btn-info form-control" id="swp">Swap</button>
-                    </div>
                 </div>
                 <div class="col-lg-9">
                     <div class="form-group">
