@@ -4,7 +4,7 @@
     <section>
         <form role="form" submit.delegate="save()">
             <div class="row">
-                <div class="col-lg-6 form-group">
+                <div class="col-md-6 form-group">
                     <div class="form-group">
                         <label for="fn">Team Name</label>
                         <input type="text" value.bind="team.name" class="form-control" id="fn" placeholder="team name">
@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 form-group">
+                <div class="col-md-6 form-group">
                     <div class="form-group">
                         <label for="sub">Sub-Title</label>
                         <input type="text" value.bind="team.subTitle" class="form-control" id="sub" placeholder="sub-title">
@@ -20,32 +20,32 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-md-3">
                     <div class="row">
-                        <div class="col-lg-5">
+                        <div class="col-md-5">
                             <div class="form-group">
                                 <label for="fgc">Foreground</label>
                                 <input type="color" value.bind="team.foregroundColour | hexColour" class="form-control" id="fgc" placeholder="foreground colour">
                             </div>
                         </div>
-                        <div class="col-lg-1">
+                        <div class="col-md-1">
                             <div class="form-group">
                                 <label for="swp">&nbsp;</label>
                                     <span class="glyphicon glyphicon-transfer icon-button" click.delegate="team.swapColours()" id="swp"></span>
                             </div>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-md-5">
                             <div class="form-group">
                                 <label for="bgc">Background</label>
                                 <input type="color" value.bind="team.backgroundColour | hexColour" class="form-control" id="bgc" placeholder="background colour">
                             </div>
                         </div>
-                        <div class="col-lg-1"></div>
+                        <div class="col-md-1"></div>
                     </div>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-md-1">
                 </div>
-                <div class="col-lg-9">
+                <div class="col-md-9">
                     <div class="form-group">
                         <label for="pvw">Preview</label>
                         <team-banner team.bind="team" id="pvw"></team-banner>
