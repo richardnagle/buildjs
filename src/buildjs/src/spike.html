@@ -1,46 +1,56 @@
 ﻿<template>
     <require from="./hex-colour-value-converter"></require>
-    <section>
-        <form role="form" submit.delegate="save()">
-            <div class="row">
-                <div class="col-lg-1">
-                    <div class="form-group">
-                        <label for="fgc">Foreground Colour</label>
-                        <input type="color" value.bind="colour" class="form-control" id="fgc" placeholder="foreground colour">
-                    </div>
-                </div>
-                <div class="col-lg-1">
-                    <div class="form-group">
-                        <label for="colr">Colour</label>
-                        <p id="colr">${colour}</p>
-                    </div>
-                </div>
-                <div class="col-lg-1">
-                    <div class="form-group">
-                        <label for="hex">Hex</label>
-                        <p id="hex">${hexOnly}</p>
-                    </div>
-                </div>
-                <div class="col-lg-1">
-                    <div class="form-group">
-                        <label for="intv">Int Value</label>
-                        <p id="intv">${intValue}</p>
-                    </div>
-                </div>
-                <div class="col-lg-1">
-                    <div class="form-group">
-                        <label for="intv">Back to Hex</label>
-                        <p id="intv">${backToHex}</p>
-                    </div>
-                </div>
-                <div class="col-lg-1">
-                    <div class="form-group">
-                        <label for="convto">To Hex with converter</label>
-                        <p id="convto">${intValue | hexColour}</p>
-                    </div>
-                </div>
-          </div>
-            <!--<button type="submit" class="btn btn-default">Save</button>-->
-        </form>
-    </section>
+    <style>
+        .swab {
+            height:4px;
+            width:2px;
+        }
+
+        .no-margin{
+            margin:0px;
+            margin-bottom:0px;
+            margin-top:0px;
+            margin-left:0px;
+            margin-right:0px;
+        }
+
+        .no-padding{
+            padding:0px;
+            padding-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            padding-right:0px;
+        }
+
+        ul{
+            display:inline-block;
+        }
+
+        li.no-margin.no-padding{
+            margin:0px;
+            margin-bottom:0px;
+            margin-top:0px;
+            margin-left:0px;
+            margin-right:0px;
+            padding:0px;
+            padding-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            padding-right:0px;
+        }
+    </style>
+    
+    <div repeat.for="swabs of rows" class="no-margin no-padding" style="height:4px">
+        <ul class="no-margin no-padding list-inline">
+            <li repeat.for="swab of swabs" class="no-margin no-padding">
+                <div class="swab no-margin no-padding" css="background-color:${swab | hexColour};"></div>
+            </li>
+        </ul>
+    </div>
+    <!--<div repeat.for="colours of rows">    
+        <div repeat.for="colour of colours" class="row">
+            <div class="col-md-2">${colour | hexColour}</div>
+            <div class="col-md-10" css="background-color:${colour | hexColour};"></div>
+        </div>
+    </div>-->
 </template>

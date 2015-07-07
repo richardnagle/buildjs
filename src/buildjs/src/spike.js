@@ -1,22 +1,18 @@
-﻿import S from 'stringjs';
-
-export class Spike {
+﻿export class Spike {
 
     constructor(){
-        this.colour = '#ffffff';
-    }
-
-    get hexOnly(){
-        return this.colour.substring(1); 
-    }
-
-    get intValue(){
-        return Number.parseInt(this.hexOnly, 16);
-    }
-
-    get backToHex(){
-        var hex=this.intValue.toString(16);
-        hex = S(hex).padLeft(6,'0');
-        return '#'+hex;
+        this.rows = new Array(16*16);
+                
+        for (var b=0;b<16; b++) {
+            for (var g=0; g<16; g++){
+                var swabs = new Array(16);
+            
+                for(var r=0; r<16; r++){
+                    swabs[r] = (r*256*256*16)+(g*256*16)+(b*16);
+                }
+            
+                this.rows[(b*16)+g] = swabs;
+            }
+        }
     }
 }
