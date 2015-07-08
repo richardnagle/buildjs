@@ -2,8 +2,8 @@
     <require from="./hex-colour-value-converter"></require>
     <style>
         .swab {
-            height:4px;
-            width:2px;
+            height:40px;
+            width:20px;
         }
 
         .no-margin{
@@ -40,17 +40,19 @@
         }
     </style>
     
-    <div repeat.for="swabs of rows" class="no-margin no-padding" style="height:4px">
-        <ul class="no-margin no-padding list-inline">
-            <li repeat.for="swab of swabs" class="no-margin no-padding">
-                <div class="swab no-margin no-padding" css="background-color:${swab | hexColour};"></div>
-            </li>
-        </ul>
-    </div>
-    <!--<div repeat.for="colours of rows">    
-        <div repeat.for="colour of colours" class="row">
-            <div class="col-md-2">${colour | hexColour}</div>
-            <div class="col-md-10" css="background-color:${colour | hexColour};"></div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div repeat.for="swabs of rows" class="no-margin no-padding" style="height:4px">
+                <ul class="no-margin no-padding list-inline">
+                    <li repeat.for="swab of swabs" class="no-margin no-padding">
+                        <div class="swab no-margin no-padding" css="background-color:${swab.value | hexColour};" click.delegate="swab.colourClicked()"></div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>-->
+        <div class="col-md-3">
+            <div>Selected Colour = ${selectedColour | hexColour}</div>
+        </div>
+    </div>
 </template>
