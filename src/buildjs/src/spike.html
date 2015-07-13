@@ -2,8 +2,8 @@
     <require from="./hex-colour-value-converter"></require>
     <style>
         .swab {
-            height:40px;
-            width:20px;
+            height:20px;
+            width:40px;
         }
 
         .no-margin{
@@ -43,7 +43,7 @@
 
     <div class="row">
         <div class="col-md-3">
-            <div repeat.for="swabs of rows" class="no-margin no-padding" style="height:4px">
+            <div repeat.for="swabs of rows" class="no-margin no-padding" style="height:20px">
                 <ul class="no-margin no-padding list-inline">
                     <li repeat.for="swab of swabs" class="no-margin no-padding">
                         <div class="swab no-margin no-padding" css="background-color:${swab.value | hexColour};" click.delegate="swab.colourClicked()"></div>

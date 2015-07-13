@@ -1,13 +1,18 @@
 ﻿export class Spike {
 
     constructor(){
-        this.selectedColour = new ColourViewModel(8,8,8).value;
+        this.selectedColour = 0;
+        this.buildColours();
+    }
 
-        var colourJumpFactor = 2; // needs to be a factor of 16
-        var elementCount = 16 / colourJumpFactor
+
+    buildColours(){
+
+        var colourJumpFactor = 4; // needs to be a factor of 16
+        var elementCount = 16 / colourJumpFactor;
         var colourJump = 16 * colourJumpFactor;
 
-        this.rows = new Array(elementCount*elementCount);
+        var rows = new Array(elementCount*elementCount);
                 
         for (var b=0;b<elementCount; b++) {
             for (var g=0; g<elementCount; g++){
@@ -17,10 +22,12 @@
                     swabs[r] = new ColourViewModel(r*colourJump,g*colourJump,b*colourJump, this);
                 }
             
-                this.rows[(b*elementCount)+g] = swabs;
+                rows[(b*elementCount)+g] = swabs;
             }
         }
-    }
+
+        this.rows = rows;
+    }  
 }
 
 export class ColourViewModel
