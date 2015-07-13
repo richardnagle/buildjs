@@ -1,7 +1,6 @@
 ﻿export class Spike {
 
     constructor(){
-        this.selectedColour = 0;
         this.buildColours();
     }
 
@@ -12,7 +11,8 @@
         var elementCount = 16 / colourJumpFactor;
         var colourJump = 16 * colourJumpFactor;
 
-        var rows = new Array(elementCount*elementCount);
+        var rowCount = elementCount*elementCount;
+        var rows = new Array(rowCount);
                 
         for (var b=0;b<elementCount; b++) {
             for (var g=0; g<elementCount; g++){
@@ -27,6 +27,8 @@
         }
 
         this.rows = rows;
+        
+        this.rows[rowCount-1][elementCount-1]=new ColourViewModel(255,255,255,this);
     }  
 }
 
