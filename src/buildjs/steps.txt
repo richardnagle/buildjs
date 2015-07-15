@@ -35,3 +35,12 @@
 		 - change dependency from 'serve' to 'build'
 		 i.e. gulp.task('watch-vs', ['build'], function() {
 17. right-click gulpfile.js and select Task Runner Explorer. bind the watch-vs task to project start 
+
+-----------
+VS-Code
+-----------
+
+1. Created file jsconfig.json in src folder (Aurelia source .js & .html folder)
+2. Searched in wwwroot\jspm_packages\github\aurelia sub-folders for all .d.ts files and copied into src\typings 
+   (for js intellisense)
+3. Add typings to .gitignore
