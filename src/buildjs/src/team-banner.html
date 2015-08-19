@@ -2,13 +2,13 @@
     <require from="./hex-colour-value-converter"></require>
 
     <style>
-      .teamText {
+      .teamText${team.id} {
           padding-bottom:4px; 
           padding-left:30px; 
           vertical-align:middle
       }
  
-      .team-border-outer{
+      .team-border-outer${team.id}{
           border: 3px solid;
           border-radius: 15px;
           padding: 3px;
@@ -16,7 +16,7 @@
           background-color: ${team.foregroundColour | hexColour};                     
       }
 
-     .team-border-middle{
+     .team-border-middle${team.id}{
           border: 6px solid;
           border-radius: 15px;
           padding: 3px;
@@ -24,7 +24,7 @@
           background-color: ${team.foregroundColour | hexColour};                     
       }
 
-      .team-border-inner{
+      .team-border-inner${team.id}{
           border: 2px solid;
           border-radius: 15px;
           padding: 3px;
@@ -33,11 +33,11 @@
       }
   </style>
     
-    <div class="team-border-outer">
-        <div class="team-border-middle">
-            <div class="team-border-inner">
-                <h1 class="teamText">${team.name}</h1>
-                <h4 class="teamText">${team.subTitle}</h4>
+    <div class="team-border-outer${team.id}">
+        <div class="team-border-middle${team.id}">
+            <div class="team-border-inner${team.id}">
+                <h1 class="teamText${team.id}">${team.name}</h1>
+                <h4 class="teamText${team.id}">${team.subTitle}</h4>
             </div>
         </div>
     </div>
