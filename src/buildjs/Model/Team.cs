@@ -2,6 +2,11 @@
 {
     public class Team
     {
+        public Team()
+        {
+            IsVisible = true;
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
 

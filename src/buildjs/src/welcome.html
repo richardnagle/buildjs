@@ -4,7 +4,7 @@
         <ul class="list-group" style="margin-bottom: 5px">
             <li repeat.for="team of teams">
                 <a route-href="route: team; params.bind: {id: team.id}">
-                    <team-banner team.bind="team"></team-banner>
+                    <team-banner team.bind="team" if.bind="team.isVisible"></team-banner>
                 </a>
             </li>
         </ul>
