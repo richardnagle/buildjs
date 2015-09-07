@@ -1,11 +1,16 @@
-﻿import {bindable} from 'aurelia-framework';
+﻿import {bindable,computedFrom} from 'aurelia-framework';
 import {TeamViewModel} from 'models/team-view-model';
 
 export class TeamBannerCustomElement {
     @bindable team: TeamViewModel;
-    @bindable showsubtitle: Boolean;
+    @bindable showsubtitle: String;
 
     constructor() {
-        this.showsubtitle = false;
+        this.showsubtitle = 'true';
+    }
+
+    @computedFrom('showsubtitle')
+    get isSubTitleDisplayed(){
+        return this.showsubtitle == 'true';
     }
 }
