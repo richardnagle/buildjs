@@ -29,7 +29,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.4",
     "core-js": "npm:core-js@0.9.5",
     "css": "github:systemjs/plugin-css@0.1.10",
-    "font-awesome": "npm:font-awesome@4.3.0",
+    "font-awesome": "npm:font-awesome@4.4.0",
     "traceur": "github:jmcriffey/bower-traceur@0.0.88",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
     "github:aurelia/animator-css@0.2.0": {
@@ -221,7 +221,7 @@ System.config({
     "npm:events-browserify@0.0.1": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:font-awesome@4.3.0": {
+    "npm:font-awesome@4.4.0": {
       "css": "github:systemjs/plugin-css@0.1.10"
     },
     "npm:https-browserify@0.0.0": {
