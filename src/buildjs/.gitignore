@@ -5,5 +5,5 @@ bower_components
 .DS_STORE
 /wwwroot/dist
 typings
-src/*.js
-src/*.js.map
+src/**/*.js
+src/**/*.js.map
