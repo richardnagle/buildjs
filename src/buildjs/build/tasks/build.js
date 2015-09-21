@@ -7,20 +7,43 @@ var sourcemaps = require('gulp-sourcemaps');
 var paths = require('../paths');
 var compilerOptions = require('../babel-options');
 var assign = Object.assign || require('object.assign');
-
-// transpiles changed es6 files to SystemJS format
-// the plumber() call prevents 'pipe breaking' caused
-// by errors from other gulp plugins
-// https://www.npmjs.com/package/gulp-plumber
-gulp.task('build-system', function () {
-  return gulp.src(paths.source)
-    .pipe(plumber())
-    .pipe(changed(paths.output, {extension: '.js'}))
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(to5(assign({}, compilerOptions, {modules:'system'})))
-    .pipe(sourcemaps.write({includeContent: false, sourceRoot: paths.sourceMapRelativePath }))
-    .pipe(gulp.dest(paths.output));
+var notify = require("gulp-notify");
+var ts = require('gulp-typescript');
+var tsProject = ts.createProject('tsconfig.json', {
+  typescript: require('typescript'),
 });
+
+ gulp.task('build-system', function(callback) {
+   return runSequence(
+    'build-ts',
+    'build-js',
+     callback
+   );
+ });
+
+// gulp-typescript compiles TS files directly into ES5
+gulp.task('build-ts', function () {
+  var tsResult = gulp.src([paths.tsSource, paths.tsxSource, paths.jspmDefinitions, paths.typings])
+    .pipe(sourcemaps.init())
+    .pipe(ts(tsProject));
+  return tsResult.js
+    .pipe(sourcemaps.write({includeContent: false, sourceRoot: paths.sourceMapRelativePath}))
+    .pipe(gulp.dest(paths.root));
+});
+
+ // transpiles changed ES6 files to SystemJS format
+ // the plumber() call prevents 'pipe breaking' caused
+ // by errors from other gulp plugins
+ // https://www.npmjs.com/package/gulp-plumber
+ gulp.task('build-js', function () {
+   return gulp.src(paths.source)
+     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+     .pipe(changed(paths.output, {extension: '.js'}))
+     .pipe(sourcemaps.init({loadMaps: true}))
+     .pipe(to5(assign({}, compilerOptions, {modules:'system'})))
+     .pipe(sourcemaps.write({includeContent: true}))
+     .pipe(gulp.dest(paths.output));
+ });
 
 // copies changed html files to the output directory
 gulp.task('build-html', function () {

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "umd",
+    "target": "ES5",
+    "noImplicitAny": true,
+    "noEmitOnError": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "experimentalAsyncFunctions": true,
+    "jsx": "preserve"
+  }
+}
