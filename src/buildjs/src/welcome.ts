@@ -4,7 +4,7 @@ import {TeamViewModel} from './models/team-view-model';
 
 @inject(HttpClient)
 export class App {
-  constructor(httpClient) {
+  constructor(httpClient: HttpClient) {
     this.httpClient = httpClient;
   }
 

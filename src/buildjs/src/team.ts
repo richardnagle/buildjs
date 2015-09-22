@@ -6,14 +6,14 @@ import {TeamViewModel} from './models/team-view-model';
 export class Team {
 
     httpClient: HttpClient;
-    team;
+    team: TeamViewModel;
     
-  constructor(httpClient) {
+  constructor(httpClient: HttpClient) {
     this.httpClient = httpClient;
     this.team = new TeamViewModel({"ForegroundColour": 1, "BackgroundColour": 1})       
   }
   
-  activate(params) {
+  activate(params: any) {
     var teamId = params.id;
     
     return this.httpClient.get('./team/'+teamId)

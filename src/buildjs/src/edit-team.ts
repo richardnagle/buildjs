@@ -5,9 +5,12 @@ import {Router} from 'aurelia-router';
 
 @inject(HttpClient,Router)
 export class EditTeam {
+    team: TeamViewModel;
+    http: HttpClient;
+    router: Router;
 
-    constructor(http,router){
-        this.team = new TeamViewModel();
+    constructor(http: HttpClient, router: Router){
+        this.team = new TeamViewModel(null);
         this.http = http;
         this.router = router;
     }

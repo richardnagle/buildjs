@@ -2,7 +2,7 @@
 
 export class HexColourValueConverter
 {
-    toView(rgbInt)
+    toView(rgbInt: number)
     {
         if(rgbInt == null){
             return null;
@@ -13,7 +13,7 @@ export class HexColourValueConverter
         return '#'+hex;        
     }
 
-    fromView(rgbHexString)
+    fromView(rgbHexString: string)
     {
         if(rgbHexString == null) {
             return null;

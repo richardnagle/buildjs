@@ -4,6 +4,8 @@
         this.buildColours();
     }
 
+    rows: Array<Array<ColourViewModel>>;
+    selectedColour: number;
 
     buildColours(){
 
@@ -12,11 +14,11 @@
         var colourJump = 16 * colourJumpFactor;
 
         var rowCount = elementCount*elementCount;
-        var rows = new Array(rowCount);
+        var rows = new Array<Array<ColourViewModel>>(rowCount);
                 
         for (var b=0;b<elementCount; b++) {
             for (var g=0; g<elementCount; g++){
-                var swabs = new Array(elementCount);
+                var swabs = new Array<ColourViewModel>(elementCount);
             
                 for(var r=0; r<elementCount; r++){
                     swabs[r] = new ColourViewModel(r*colourJump,g*colourJump,b*colourJump, this);
@@ -34,7 +36,10 @@
 
 export class ColourViewModel
 {
-    constructor(r,g,b,parent){
+    value: number;
+    parent: Spike;
+    
+    constructor(r:number, g:number, b:number, parent: Spike){
         this.value = (r*256*256)+(g*256)+b;
         this.parent = parent;
     }

@@ -1,11 +1,12 @@
 import 'bootstrap';
 import 'bootstrap/css/bootstrap.css!';
+import {Router, RouterConfiguration} from 'aurelia-router';
 
 export class App {
 
-   router;
+   router: Router;
 
-  configureRouter(config, router){
+  configureRouter(config: RouterConfiguration, router: Router){
       this.router = router;
 
     config.title = 'Teams';
@@ -16,4 +17,4 @@ export class App {
       { route: 'spike', moduleId: './spike', nav: true, title: 'Spike'}
     ]);
   }
-}
+} 

@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "module": "umd",
-    "target": "ES5",
+    "target": "ES6",
+    "noLib": true,
     "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
     "noEmitOnError": false,
     "removeComments": true,
     "preserveConstEnums": true,
@@ -11,5 +12,8 @@
     "experimentalDecorators": true,
     "experimentalAsyncFunctions": true,
     "jsx": "preserve"
-  }
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

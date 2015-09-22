@@ -1,5 +1,13 @@
 ﻿export class TeamViewModel{
-    constructor(teamJson)
+    
+    id: number;
+    name: string;
+    subTitle: string;
+    foregroundColour: number;
+    backgroundColour: number;
+    isVisible: boolean;
+    
+    constructor(teamJson: any)
     {
         if (teamJson) {
             
