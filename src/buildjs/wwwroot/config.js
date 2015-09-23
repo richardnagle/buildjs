@@ -42,7 +42,8 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.17",
     "font-awesome": "npm:font-awesome@4.4.0",
     "nprogress": "github:rstacruz/nprogress@0.2.0",
-    "stringjs": "npm:string@3.3.0",
+    "string": "npm:string@3.3.1",
+    "stringjs": "npm:string@3.3.1",
     "github:aurelia/animator-css@0.16.0": {
       "aurelia-metadata": "github:aurelia/metadata@0.8.0",
       "aurelia-templating": "github:aurelia/templating@0.15.1"

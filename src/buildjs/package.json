@@ -77,6 +77,7 @@
       "css": "github:systemjs/plugin-css@^0.1.16",
       "font-awesome": "npm:font-awesome@^4.4.0",
       "nprogress": "github:rstacruz/nprogress@^0.2.0",
+      "string": "npm:string@^3.3.1",
       "stringjs": "npm:string@^3.3.0"
     },
     "devDependencies": {

@@ -1,4 +1,4 @@
-﻿import S from 'stringjs';
+﻿import * as S from 'string';
 
 export class HexColourValueConverter
 {
