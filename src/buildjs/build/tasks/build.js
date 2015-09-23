@@ -16,7 +16,6 @@ var tsProject = ts.createProject('../../tsconfig.json', {
  gulp.task('build-system', function(callback) {
    return runSequence(
     'build-ts',
-    'build-js',
      callback
    );
  });
@@ -28,7 +27,7 @@ gulp.task('build-ts', function () {
     .pipe(ts(tsProject));
   return tsResult.js
     .pipe(sourcemaps.write({includeContent: false, sourceRoot: paths.sourceMapRelativePath}))
-    .pipe(gulp.dest(paths.root));
+    .pipe(gulp.dest(paths.output));
 });
 
  // transpiles changed ES6 files to SystemJS format
