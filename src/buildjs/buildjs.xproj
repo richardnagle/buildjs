@@ -18,17 +18,22 @@
   </PropertyGroup>
   <PropertyGroup>
     <TypeScriptTarget>ES6</TypeScriptTarget>
-    <TypeScriptCompileOnSaveEnabled>true</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptCompileOnSaveEnabled>false</TypeScriptCompileOnSaveEnabled>
     <TypeScriptNoImplicitAny>false</TypeScriptNoImplicitAny>
     <!-->TypeScriptModuleKind>AMD</TypeScriptModuleKind-->
     <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
-    <TypeScriptOutFile></TypeScriptOutFile>
-    <TypeScriptOutDir></TypeScriptOutDir>
+    <TypeScriptOutFile>
+    </TypeScriptOutFile>
+    <TypeScriptOutDir>
+    </TypeScriptOutDir>
     <TypeScriptGeneratesDeclarations>false</TypeScriptGeneratesDeclarations>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
-    <TypeScriptMapRoot></TypeScriptMapRoot>
-    <TypeScriptSourceRoot></TypeScriptSourceRoot>
+    <TypeScriptMapRoot>
+    </TypeScriptMapRoot>
+    <TypeScriptSourceRoot>
+    </TypeScriptSourceRoot>
     <TypeScriptNoEmitOnError>true</TypeScriptNoEmitOnError>
+    <TypeScriptCompileBlocked>True</TypeScriptCompileBlocked>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
