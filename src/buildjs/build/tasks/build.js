@@ -9,7 +9,7 @@ var compilerOptions = require('../babel-options');
 var assign = Object.assign || require('object.assign');
 var notify = require("gulp-notify");
 var ts = require('gulp-typescript');
-var tsProject = ts.createProject('../../tsconfig.json', {
+var tsProject = ts.createProject('tsconfig.json', {
   typescript: require('typescript'),
 });
 
