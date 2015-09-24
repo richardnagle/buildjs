@@ -23,7 +23,8 @@ gulp.task('serve', ['build'], function (done) {
     browserSync({
         open: false,
         proxy: 'localhost:49387',
-        port: 8000
+        port: 8000,
+        online: false
     }, done);
 });
 
