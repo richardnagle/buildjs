@@ -1,0 +1,12 @@
+﻿<template>
+    <div>
+        <form>
+            <textarea placeholder="Type your comment" value.bind="text"></textarea>
+            <div>
+                <button click.delegate="add()">Add</button>
+                <button click.delegate="clear()">Clear</button>
+            </div>
+            <div>${output}</div>
+        </form>
+    </div>
+</template>
