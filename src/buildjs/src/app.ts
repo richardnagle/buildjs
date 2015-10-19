@@ -14,7 +14,7 @@ export class App {
       { route: '', moduleId: './welcome', nav: true, title: 'Home', name: 'home'},
       { route: 'team/:id',  moduleId: './team', name: 'team', nav: false },
       { route: 'new-team', moduleId: './edit-team', nav: true, title: 'New Team' },
-      { route: 'chat', moduleId: './notify', nav: true, title: 'Chat' },
+      { route: 'chat', moduleId: './chat', nav: true, title: 'Chat' },
       { route: 'spike', moduleId: './spike', nav: true, title: 'Spike'}
     ]);
   }

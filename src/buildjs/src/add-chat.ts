@@ -1,13 +1,18 @@
-﻿export class AddChat {
-    text: string;
-    output: string;
+﻿import {NotificationModel} from './models/notification-model';
+
+export class AddChatCustomElement {
+    message: string;
+    username: string;
 
     add() {
-        this.output = this.text;
-        this.clear()
+
+        // send message
+
+        this.message = null;
     }
 
     clear() {
-        this.text = null;
+        this.message = null;
+        this.username = null;
     }
 }

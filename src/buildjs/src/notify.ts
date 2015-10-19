@@ -1,16 +1,13 @@
 ﻿import {NotificationModel} from './models/notification-model';
 
-export class Notify {
+export class NotifyCustomElement {
     messages: NotificationModel[];
 
     constructor() {
         this.messages = [];
     }
 
-    add(message: string) {
-
-        let notification = new NotificationModel(message, "Richard Nagle");
-
-        this.messages.push(notification);
+    add(message: NotificationModel) {
+        this.messages.push(message);
     }
 }
