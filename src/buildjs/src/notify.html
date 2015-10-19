@@ -1,8 +1,11 @@
 ﻿<template>
     <div><button click.delegate="add('chucks away')">Add</button></div>
     <div>
-        <ul>
-            <li repeat.for="message of messages">${message.timestamp} ${message.content} ${message.username}</li>
+        <ul class="list-group">
+            <li repeat.for="message of messages" style="margin-bottom: 8px;">
+                <div>${message.content}</div>
+                <div class="small text-muted">${message.timestamp} ${message.username}</div>
+            </li>
         </ul>
     </div>
 </template>
