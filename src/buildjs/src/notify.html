@@ -4,7 +4,7 @@
         <ul class="list-group">
             <li repeat.for="message of messages" style="margin-bottom: 8px;">
                 <div>${message.content}</div>
-                <div class="small text-muted">${message.timestamp} ${message.username}</div>
+                <div class="small text-muted">${message.timestamp.toLocaleString("en-GB")} ${message.username}</div>
             </li>
         </ul>
     </div>

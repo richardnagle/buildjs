@@ -9,8 +9,8 @@
         this._username = username;
     }
 
-    get timestamp(): string {
-        return this._timestamp.toLocaleString("en-GB");
+    get timestamp(): Date {
+        return this._timestamp;
     }
 
     get content(): string {
