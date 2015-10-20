@@ -2,8 +2,8 @@
     <div>
         <ul class="list-group">
             <li repeat.for="message of messages" style="margin-bottom: 8px;">
-                <div>${message.content}</div>
-                <div class="small text-muted">${message.timestamp.toLocaleString("en-GB")} ${message.username}</div>
+                    <h4 class="text-primary" style="margin-bottom: -5px">${message.content}</h4>
+                    <span class="small text-muted">${message.timestamp.toLocaleString("en-GB")} ${message.username}</span>
             </li>
         </ul>
     </div>

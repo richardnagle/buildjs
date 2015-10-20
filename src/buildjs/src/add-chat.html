@@ -1,12 +1,17 @@
 ﻿<template>
-    <div>
-        <input placeholder="Enter your name" value.bind="username"/>
-    </div>
-    <div>
-        <textarea placeholder="Type your comment" value.bind="message"></textarea>
-    </div>
-    <div>
-        <button click.delegate="add()">Add</button>
-        <button click.delegate="clear()">Clear</button>
+    <div class="panel panel-info" style="position:absolute; bottom: 1px; width:100%">
+        <div class="panel-heading">
+            <h5>Add Comments</h5>
+        </div>
+        <div class="panel-body">
+            <div>
+                <textarea placeholder="Type your comment"   value.bind="message" style="width:100%; height:70px;"></textarea>
+                <input placeholder="Enter your name" value.bind="username" style="width:400px"/>
+                <span style="float:right;">
+                    <button click.delegate="add()" class="btn btn-info">Add</button>
+                    <button click.delegate="clear()" class="btn btn-info">Clear</button>
+                </span>
+            </div>
+        </div>
     </div>
 </template>
