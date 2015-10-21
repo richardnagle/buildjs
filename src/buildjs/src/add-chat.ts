@@ -4,13 +4,16 @@ import {inject} from 'aurelia-framework';
 
 @inject(EventAggregator)
 export class AddChatCustomElement {
-    message: string;
+    private _message: string;
     username: string;
+    disableAdd: boolean;
 
     private events: EventAggregator;
 
     constructor(events: EventAggregator) {
         this.events = events;
+        this.message = null;
+        this.username = null;
     }    
 
     add() {
@@ -23,5 +26,14 @@ export class AddChatCustomElement {
     clear() {
         this.message = null;
         this.username = null;
+    }
+
+    get message(): string {
+        return this._message;
+    }
+    set message(value: string) {
+        this._message = value;
+
+        this.disableAdd = (value == null || value == "");
     }
 }
