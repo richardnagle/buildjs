@@ -1,5 +1,5 @@
 ﻿<template>
-    <textarea placeholder="Type your comment" value.bind="message" style="width:100%; height:70px;"></textarea>
+    <textarea placeholder="Type your comment" value.bind="message" style="width:100%; height:70px; resize:none;"></textarea>
     <input placeholder="Enter your name" value.bind="username" style="width:400px" />
     <span style="float:right;">
         <button click.delegate="add()" class="btn btn-info" disabled.bind="message | isEmpty">Add</button>
