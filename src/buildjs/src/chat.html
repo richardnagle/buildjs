@@ -1,16 +1,40 @@
 ﻿<template>
     <require from="./add-chat"></require>
     <require from="./notify"></require>
-    <div style="height: 100%">
-        <div style="overflow-y: scroll; height:60%">
+    <style>
+        template, .flex-container {
+            height: 100%;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction:column;
+        }
+
+        .notify-body {
+            flex: 2;
+            overflow-y: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .notify-footer {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+    <div class="flex-container">
+        <div class="notify-body">
             <notify></notify>
         </div>
-        <div class="panel panel-info" style="position:absolute; bottom: 1px; left: 10px; right: 10px;">
-            <div class="panel-heading">
-                <h5>Add Comments</h5>
-            </div>
-            <div class="panel-body">
-                <add-chat></add-chat>
+        <div class="notify-footer">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h5>Add Comments</h5>
+                </div>
+                <div class="panel-body notify-footer">
+                    <add-chat></add-chat>
+                </div>
             </div>
         </div>
     </div>
