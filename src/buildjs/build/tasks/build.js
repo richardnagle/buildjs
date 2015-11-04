@@ -22,11 +22,11 @@ var tsProject = ts.createProject('tsconfig.json', {
 
 // gulp-typescript compiles TS files directly into ES5
 gulp.task('build-ts', function () {
-  var tsResult = gulp.src([paths.tsSource, paths.tsxSource, paths.jspmDefinitions, paths.typings])
+    var tsResult = gulp.src([paths.tsSource, paths.tsxSource, paths.jspmDefinitions, paths.typings])
     .pipe(sourcemaps.init())
     .pipe(ts(tsProject));
   return tsResult.js
-    .pipe(sourcemaps.write({includeContent: false, sourceRoot: paths.sourceMapRelativePath}))
+    .pipe(sourcemaps.write({includeContent: true, sourceRoot: paths.sourceMapRelativePath}))
     .pipe(gulp.dest(paths.output));
 });
 
