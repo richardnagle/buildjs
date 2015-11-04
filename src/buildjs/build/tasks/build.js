@@ -26,7 +26,7 @@ gulp.task('build-ts', function () {
     .pipe(sourcemaps.init())
     .pipe(ts(tsProject));
   return tsResult.js
-    .pipe(sourcemaps.write({includeContent: true, sourceRoot: paths.sourceMapRelativePath}))
+    .pipe(sourcemaps.write({includeContent: true}))
     .pipe(gulp.dest(paths.output));
 });
 
